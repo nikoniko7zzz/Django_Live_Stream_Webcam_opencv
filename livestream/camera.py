@@ -10,7 +10,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 # 日本語フォントへのパス
-FONT_PATH = 'livestream/font/NotoSansJP-Regular.otf'
+FONT_PATH = 'font/NotoSansJP-Regular.otf'
 
 class VideoCamera(object):
     def __init__(self):
@@ -24,6 +24,7 @@ class VideoCamera(object):
         width = int(self.video.get(cv2.CAP_PROP_FRAME_WIDTH))
         height = int(self.video.get(cv2.CAP_PROP_FRAME_HEIGHT))
         text = '日本語テキスト'
+        # text = 'test text'
         image = write_text_on_frame(image, text, width, height)
         ret, jpeg = cv2.imencode('.jpg', image)
         return jpeg.tobytes()
