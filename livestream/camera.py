@@ -10,7 +10,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 # 日本語フォントへのパス
-FONT_PATH = 'font/NotoSansJP-Regular.otf'
+FONT_PATH = '/static/livestream/font/NotoSansJP-Regular.otf'
 
 class VideoCamera(object):
     def __init__(self):
