@@ -23,8 +23,8 @@ class VideoCamera(object):
         success, image = self.video.read()
         width = int(self.video.get(cv2.CAP_PROP_FRAME_WIDTH))
         height = int(self.video.get(cv2.CAP_PROP_FRAME_HEIGHT))
-        text = '日本語テキスト'
-        image = write_text_on_frame(image, text, width, height)
+        # text = '日本語テキスト'
+        # image = write_text_on_frame(image, text, width, height)
         ret, jpeg = cv2.imencode('.jpg', image)
         return jpeg.tobytes()
 
